@@ -23,7 +23,7 @@ pipeline:
                                     source:
                                         type: Inline
                                         spec:
-                                            script: echo "Hello Feature Branch"
+                                            script: echo "Hello Feature 2 Branch"
                                     environmentVariables: []
                                     outputVariables: []
                                     executionTarget: {}
