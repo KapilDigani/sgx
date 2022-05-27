@@ -14,6 +14,21 @@ pipeline:
                   execution:
                       steps:
                           - step:
+                                type: ShellScript
+                                name: Echo
+                                identifier: Echo
+                                spec:
+                                    shell: Bash
+                                    onDelegate: true
+                                    source:
+                                        type: Inline
+                                        spec:
+                                            script: echo "Hello Main Branch"
+                                    environmentVariables: []
+                                    outputVariables: []
+                                    executionTarget: {}
+                                timeout: 10m
+                          - step:
                                 name: Approver
                                 identifier: Approver
                                 type: HarnessApproval
